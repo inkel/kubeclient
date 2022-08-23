@@ -8,14 +8,15 @@ package main
 import "github.com/inkel/kubeclient"
 
 func main() {
-	c, err := kubeclient.New(false, "my-context")
+	c, cfg, err := kubeclient.New(false, "my-context")
 	if err != nil {
 		println(err)
 		return
 	}
 
-	// Do something with c
+	// Do something with c and cfg
 	_ = c
+	_ = cfg
 }
 ```
 
